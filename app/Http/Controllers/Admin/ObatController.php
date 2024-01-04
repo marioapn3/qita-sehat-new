@@ -38,7 +38,6 @@ class ObatController extends Controller
         $obat->kemasan = $request->input('kemasan');
         $obat->harga = $request->input('harga');
         $obat->save();
-
         // Redirect ke halaman tertentu setelah berhasil menyimpan
         return redirect()->route('admin.obat.index')->with('success', 'Data berhasil ditambahkan');
     }

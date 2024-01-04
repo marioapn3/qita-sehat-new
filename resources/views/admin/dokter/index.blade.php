@@ -14,7 +14,6 @@
         </nav>
     </div>
 
-
     <section class="content">
         <div class="row">
             <!-- Columns -->
@@ -74,6 +73,7 @@
             </div>
         </div>
     </section>
+
     <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -99,11 +99,11 @@
                             Hapus
                         </button>
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Javascript Datatable -->
     <script type="text/javascript">
         $(document).ready(function() {

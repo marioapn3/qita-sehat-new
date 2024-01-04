@@ -56,9 +56,7 @@ class DokterController extends Controller
         $dokter->no_hp = $request->input('no_hp');
         $dokter->no_ktp = $request->input('no_ktp');
         $dokter->alamat = $request->input('alamat');
-
         $dokter->save();
-
         // Redirect ke halaman tertentu setelah berhasil menyimpan
         return redirect()->route('admin.dokter.index')->with('success', 'Data berhasil ditambahkan');
     }

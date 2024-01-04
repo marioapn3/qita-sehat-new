@@ -14,8 +14,6 @@
         </nav>
     </div>
 
-
-
     <section class="content">
         <div class="row">
             <!-- Columns -->
@@ -66,22 +64,6 @@
                                             </td>
                                         </tr>
                                     @endforeach
-                                    {{-- @foreach ($jadwals as $jadwal)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $jadwal->hari }}</td>
-                                            <td>{{ $jadwal->jam_mulai }}</td>
-                                            <td>{{ $jadwal->jam_selesai }}</td>
-                                            <td>
-                                                <a href="{{ route('dokter.jadwal-periksa.edit', $jadwal->id) }}"
-                                                    class="btn btn-warning" role="button" title="Ubah Data"><i
-                                                        class="bi bi-pencil-square"></i></a>
-                                                <a href="{{ route('dokter.jadwal-periksa.destroy', $jadwal->id) }}"
-                                                    class="btn btn-danger" role="button" title="Hapus Data"><i
-                                                        class="bi bi-trash-fill"></i></a>
-                                            </td>
-                                        </tr>
-                                    @endforeach --}}
                                 </tbody>
                             </table>
                         </div>

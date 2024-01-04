@@ -3,9 +3,9 @@
 @php
     $pasien = Auth::user()->pasien;
 @endphp
+
 @section('content')
     <div class="pagetitle">
-
         <h1>Ubah Profil</h1>
         <nav>
             <ol class="breadcrumb">
@@ -19,6 +19,7 @@
             </ol>
         </nav>
     </div>
+
     <section class="section dashboard">
         <div class="row">
             <!-- Columns -->
@@ -118,7 +119,6 @@
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

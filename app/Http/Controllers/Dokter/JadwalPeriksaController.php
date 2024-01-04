@@ -16,7 +16,6 @@ class JadwalPeriksaController extends Controller
     public function index()
     {
         $jadwals = JadwalPeriksa::where('id_dokter', auth()->user()->dokter->id)->get();
-
         return view('dokter.jadwal-periksa.index', compact('jadwals'));
     }
 
@@ -39,7 +38,6 @@ class JadwalPeriksaController extends Controller
             'jam_selesai' => $request->jam_selesai,
             'id_dokter' => auth()->user()->dokter->id,
         ]);
-
         return redirect()->route('dokter.jadwal-periksa.index')->with('success', 'Jadwal periksa berhasil ditambahkan');
     }
 
@@ -63,7 +61,6 @@ class JadwalPeriksaController extends Controller
             'jam_mulai' => $request->jam_mulai,
             'jam_selesai' => $request->jam_selesai,
         ]);
-
         return redirect()->route('dokter.jadwal-periksa.index')->with('success', 'Jadwal periksa berhasil diubah');
     }
 
@@ -71,7 +68,6 @@ class JadwalPeriksaController extends Controller
     {
         $jadwal = JadwalPeriksa::findOrFail($request->id);
         $jadwal->delete();
-
         return redirect()->route('dokter.jadwal-periksa.index')->with('success', 'Jadwal periksa berhasil dihapus');
     }
 }

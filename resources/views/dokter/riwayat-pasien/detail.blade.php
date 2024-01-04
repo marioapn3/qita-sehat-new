@@ -102,32 +102,6 @@
 
                                         </tr>
                                     @endforeach
-                                    <tr></tr>
-                                    {{-- @foreach ($daftar_poli as $item)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->pasien->nama }}</td>
-                                            <td>{{ $item->keluhan }}</td>
-                                            <td>{{ $item->no_antrian }}</td>
-                                            <td>
-                                                @if ($item->status == 'Menunggu')
-                                                    <span class="badge bg-warning text-dark">{{ $item->status }}</span>
-                                                @elseif ($item->status == 'Dalam Periksa')
-                                                    <span class="badge bg-primary">{{ $item->status }}</span>
-                                                @elseif ($item->status == 'Selesai')
-                                                    <span class="badge bg-success">{{ $item->status }}</span>
-                                                @endif
-                                            </td>
-                                            <td>
-                                                @if ($item->status == 'Menunggu')
-                                                    <a href="{{ route('dokter.periksa-pasien.create', $item->id) }}"
-                                                        class="btn btn-primary" role="button" title="Periksa Pasien"><i
-                                                            class="bi bi-pencil-square"></i></a>
-                                                @endif
-                                            </td>
-                                        </tr>
-                                    @endforeach --}}
-
                                 </tbody>
                             </table>
                         </div>

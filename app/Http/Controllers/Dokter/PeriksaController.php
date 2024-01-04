@@ -24,9 +24,6 @@ class PeriksaController extends Controller
         if ($id_jadwal_periksa) {
             $daftar_poli = DaftarPoli::whereIn('id_jadwal', $id_jadwal_periksa)->get();
         }
-
-
-
         return view('dokter.periksa-pasien.index', compact('daftar_poli'));
     }
 

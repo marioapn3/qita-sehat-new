@@ -14,10 +14,8 @@
         </nav>
     </div>
 
-
     <section class="section dashboard">
         <div class="row">
-
             <!-- Left side columns -->
             <div class="col-lg-8">
                 <div class="card">
@@ -26,7 +24,6 @@
                             <p>Riwayat Data Poli</p>
                             <span class="text-muted">Qita Sehat</span>
                         </div>
-
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -63,13 +60,6 @@
                                                     <span class="badge bg-success">{{ $daftar_poli->status }}</span>
                                                 @endif
                                             </td>
-                                            {{-- <td>
-                                                <a href="{{ route('admin.poli.edit', $poli->id) }}" class="btn btn-warning"
-                                                    role="button" title="Ubah Data"><i class="bi bi-pencil-square"></i></a>
-                                                <a href="{{ route('admin.poli.destroy', $poli->id) }}"
-                                                    class="btn btn-danger" role="button" title="Hapus Data"><i
-                                                        class="bi bi-trash-fill"></i></a>
-                                            </td> --}}
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -127,35 +117,3 @@
         </div>
     </section>
 @endsection
-{{--
-@section('js')
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            // Ketika opsi poli dipilih
-            $('#id_poli').change(function() {
-                var id_poli = $(this).val();
-
-                // Lakukan request ke API Laravel dengan id_poli yang dipilih
-                $.ajax({
-                    url: 'http://127.0.0.1:8000/pasien/getDoktersByPoli/' + id_poli,
-                    type: 'GET',
-                    success: function(data) {
-                        // Bersihkan dan perbarui opsi jadwal
-                        $('#id_jadwal').empty();
-                        $('#id_jadwal').append('<option value="">Pilih Jadwal</option>');
-
-                        // Tambahkan opsi jadwal dari data API
-                        $.each(data.jadwals, function(key, value) {
-                            var optionText = value.hari + ' - ' + value.jam_mulai +
-                                ' - ' + value.jam_selesai;
-                            $('#id_jadwal').append('<option value="' + value.id + '">' +
-                                optionText + '</option>');
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-@endsection --}}

@@ -14,7 +14,6 @@
         </nav>
     </div>
 
-
     <section class="content">
         <div class="row">
             <!-- Columns -->

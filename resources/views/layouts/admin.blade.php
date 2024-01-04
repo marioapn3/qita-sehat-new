@@ -26,16 +26,13 @@
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
-    {{-- <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" /> --}}
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    {{-- <link href="./assets/css/style.css" rel="stylesheet" /> --}}
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-
 </head>
 
 <body>
@@ -123,6 +120,7 @@
             </li>
         </ul>
     </aside>
+
     <main id="main" class="main">
         <section class="section dashboard">
             <div class="row">
@@ -160,8 +158,7 @@
         </section>
     </main>
 
-
-    {{-- Footer --}}
+    <!-- Footer -->
     <footer id="footer" class="footer">
         <div class="copyright">
             Copyright &copy; <span id="year"></span>
@@ -174,11 +171,9 @@
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
 
     <!-- Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    {{-- <script src="../../assets/js/main.js"></script> --}}
 </body>
 
 </html>

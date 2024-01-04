@@ -3,7 +3,6 @@
 
 @section('content')
     <div class="pagetitle">
-
         <h1>Profil</h1>
         <nav>
             <ol class="breadcrumb">
@@ -14,6 +13,7 @@
             </ol>
         </nav>
     </div>
+
     <section class="section dashboard">
         <div class="row">
             <!-- Columns -->
@@ -28,12 +28,8 @@
                     </div>
                     <div class="card-body d-flex flex-column flex-md-row align-items-start justify-content-between">
                         <div class="text-center mb-4 mb-md-0 mb-lg-0 me-lg-4 me-sm-0 me-md-4 me-sm-0">
-
                             <img class="ratio ratio-1x1" src="{{ asset('assets/img/avatars/default.png') }}"
                                 alt="Profil" />
-
-
-                            {{-- @endif --}}
                         </div>
                         <div class="col-12 col-md-8 text-md-start d-grid gap-2 d-md-block">
                             <h5 class="card-title p-2">Detail Data Profil</h5>
@@ -64,7 +60,6 @@
                                         <td>:</td>
                                         <td>{{ Auth::user()->pasien->no_rm }}</td>
                                     </tr>
-
                                 </tbody>
                             </table>
                         </div>

@@ -15,8 +15,6 @@
     <!-- Favicons -->
     <link href="{{ asset('assets/img/logo/hospital.svg') }}" rel="icon">
     <link href="{{ asset('assets/img/logo/hospital.svg') }}" rel="apple-touch-icon">
-    {{-- <link href="./assets/img/logo/hospital.svg" rel="icon" />
-    <link href="./assets/img/logo/hospital.svg" rel="apple-touch-icon" /> --}}
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,13 +26,9 @@
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
-    {{-- <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" /> --}}
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    {{-- <link href="./assets/css/style.css" rel="stylesheet" /> --}}
-
 </head>
 
 <body>
@@ -148,7 +142,6 @@
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
 
     <!-- Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>

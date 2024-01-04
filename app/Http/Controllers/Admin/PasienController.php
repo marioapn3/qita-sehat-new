@@ -66,7 +66,6 @@ class PasienController extends Controller
         $pasien->alamat = $request->input('alamat');
         $pasien->no_rm = $no_rm;
         $pasien->save();
-
         return redirect()->route('admin.pasien.index')->with('success', 'Data berhasil ditambahkan');
     }
 
@@ -101,7 +100,6 @@ class PasienController extends Controller
         $pasien->no_ktp = $request->input('no_ktp');
         $pasien->alamat = $request->input('alamat');
         $pasien->save();
-
         return redirect()->route('admin.pasien.index')->with('success', 'Data berhasil diubah');
     }
 

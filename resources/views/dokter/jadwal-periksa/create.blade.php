@@ -58,9 +58,3 @@
         </div>
     </section>
 @endsection
-{{-- $table->id();
-$table->enum('hari', ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']);
-$table->time('jam_mulai');
-$table->time('jam_selesai');
-$table->foreignId('id_dokter')->constrained('dokters')->cascadeOnDelete()->cascadeOnUpdate();
-$table->timestamps(); --}}

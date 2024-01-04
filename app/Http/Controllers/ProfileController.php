@@ -44,7 +44,6 @@ class ProfileController extends Controller
         $user = User::find(auth()->user()->id);
         $user->username = $request->username;
         $user->save();
-
         return redirect()->route('dokter.profile')->with('success', 'Profil Berhasil Diubah');
     }
     public function profil_pasien()
@@ -79,7 +78,6 @@ class ProfileController extends Controller
         $user = User::find(auth()->user()->id);
         $user->username = $request->username;
         $user->save();
-
         return redirect()->route('pasien.profile')->with('success', 'Profil Berhasil Diubah');
     }
 

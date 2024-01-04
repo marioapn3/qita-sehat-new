@@ -17,8 +17,6 @@
         </nav>
     </div>
 
-
-
     <section class="content">
         <div class="row">
             <!-- Columns -->
@@ -86,6 +84,7 @@
         </div>
     </section>
 
+    <!-- Javascript Datatable -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('#obat').DataTable();

@@ -3,6 +3,7 @@
 @php
     $dokter = Auth::user()->dokter;
 @endphp
+
 @section('content')
     <div class="pagetitle">
         <h1>Ubah Profil</h1>
@@ -18,6 +19,7 @@
             </ol>
         </nav>
     </div>
+
     <section class="section dashboard">
         <div class="row">
             <!-- Columns -->
@@ -117,7 +119,6 @@
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

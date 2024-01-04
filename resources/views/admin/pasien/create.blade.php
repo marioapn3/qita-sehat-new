@@ -63,6 +63,7 @@
             </div>
         </div>
     </section>
+
     <script>
         document.getElementById('togglePassword').addEventListener('click', function() {
             var passwordInput = document.getElementById('password');
