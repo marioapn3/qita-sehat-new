@@ -3,7 +3,7 @@
 @section('content')
     <!-- Page Title -->
     <div class="pagetitle">
-        <h1>Periksa Pasien</h1>
+        <h1>Memeriksa Pasien</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -26,7 +26,7 @@
 
                     <form role="form" method="post" action="{{ route('dokter.periksa-pasien.store') }}"
                         class="container p-4">
-                        <h3>Periksa Pasien </h3>
+                        <h4 class=" text-uppercase fw-bold mb-3">Memeriksa Pasien</h4>
                         @csrf
                         @method('POST')
                         <input hidden type="number" name="id_daftar_polis" value="{{ $periksa->id }}">
@@ -52,8 +52,9 @@
                             <label>Biaya Periksa</label>
                             <input type="number" name="biaya_periksa" class="form-control" required>
                         </div>
+                        <hr>
                         <div class="mb-3 ">
-                            <h3>List Obat</h3>
+                            <h4 class=" text-uppercase fw-bold mb-3">List Obat</h4>
                             <div id="obat-container" class="mb-2">
                                 <div class="form-group row">
                                     <div class="col-lg-8">

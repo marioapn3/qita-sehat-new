@@ -24,7 +24,6 @@
                             <p>Periksa Pasien</p>
                             <span class="text-muted">Qita Sehat</span>
                         </div>
-
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -58,7 +57,7 @@
                                             <td>
                                                 @if ($item->status == 'Menunggu')
                                                     <a href="{{ route('dokter.periksa-pasien.create', $item->id) }}"
-                                                        class="btn btn-primary" role="button" title="Periksa Pasien"><i
+                                                        class="btn btn-primary" role="button" title="Memeriksa Pasien"><i
                                                             class="bi bi-pencil-square"></i></a>
                                                 @endif
                                             </td>
