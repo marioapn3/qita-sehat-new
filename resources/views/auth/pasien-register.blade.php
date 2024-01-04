@@ -49,8 +49,15 @@
                 <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
                     <div class="d-table-cell align-middle">
                         <div class="card">
-                            <div class="card-header text-center fs-3 fw-bold">Register</div>
-                            <div class="card-body">
+                            <div class="row card-header m-2 d-flex align-items-center justify-content-center">
+                                <h4 class="col-8 col-lg-8 fs-3 fw-bold p-0 mb-0">Register</h4>
+                                <p class="col-4 col-lg-4 text-end align-top p-0 mb-0">
+                                    <a href="{{ route('home') }}">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="card-body m-2">
                                 <form method="POST" action="{{ route('pasien.register.store') }}" method="POST">
                                     @csrf
                                     @method('POST')
@@ -96,9 +103,8 @@
                                 </form>
                             </div>
                             <div class="card-footer text-body-secondary text-center">
-                                <p class="mt-3">Sudah Punya Akun? <a href="{{ route('login.pasien') }}">Login</a>
+                                <p>Sudah Punya Akun? <a href="{{ route('login.pasien') }}">Login</a>
                                 </p>
-                                <a href="{{ route('home') }}" class="btn btn-secondary btn-sm mt-4">Kembali</a>
                             </div>
                         </div>
                     </div>
@@ -112,9 +118,6 @@
 
     <!-- Vendor JS Files -->
     <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <!-- <script src="../../../assets/js/main.js"></script> -->
 </body>
 
 </html>

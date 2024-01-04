@@ -26,12 +26,9 @@
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
-    {{-- <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" /> --}}
 
     <!-- Main CSS File -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    {{-- <link href="./assets/css/style.css" rel="stylesheet" /> --}}
 </head>
 
 <body>
@@ -41,7 +38,14 @@
                 <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
                     <div class="d-table-cell align-middle">
                         <div class="card mb-0">
-                            <div class="card-header text-center fs-3 fw-bold">Login</div>
+                            <div class="row card-header m-2 d-flex align-items-center justify-content-center">
+                                <h4 class="col-8 col-lg-8 fs-3 text-start fw-bold p-0 mb-0">Login</h4>
+                                <p class="col-4 col-lg-4 text-end align-top p-0 mb-0">
+                                    <a href="{{ route('home') }}">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </a>
+                                </p>
+                            </div>
                             <div class="card-body m-2">
                                 <form method="POST" action="{{ route('login.authenticate') }}">
                                     @csrf
@@ -61,9 +65,6 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="card-footer text-body-secondary text-center">
-                                <a href="{{ route('home') }}" class="btn btn-secondary btn-sm">Kembali</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -76,9 +77,6 @@
 
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-    <!-- Main JS File -->
-    <!-- <script src="../../../assets/js/main.js"></script> -->
 </body>
 
 </html>
