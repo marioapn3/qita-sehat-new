@@ -40,6 +40,7 @@
                                         <th>Hari</th>
                                         <th>Jam Mulai</th>
                                         <th>Jam Selesai</th>
+                                        <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -50,6 +51,13 @@
                                             <td>{{ $jadwal->hari }}</td>
                                             <td>{{ $jadwal->jam_mulai }}</td>
                                             <td>{{ $jadwal->jam_selesai }}</td>
+                                            <td>
+                                                @if ($jadwal->status == 'Aktif')
+                                                    <span class="badge bg-success">Aktif</span>
+                                                @else
+                                                    <span class="badge bg-danger">Tidak Aktif</span>
+                                                @endif
+                                            </td>
                                             <td>
                                                 <a href="{{ route('dokter.jadwal-periksa.edit', $jadwal->id) }}"
                                                     class="btn btn-warning" role="button" title="Ubah Data"><i

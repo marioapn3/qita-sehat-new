@@ -15,6 +15,7 @@ class DaftarPoliController extends Controller
     {
         $this->middleware(['auth', 'checkRole:pasien']);
     }
+
     public function getDoktersByPoli($id_poli)
     {
         $dokters = Dokter::where('id_poli', $id_poli)->get();
@@ -35,7 +36,7 @@ class DaftarPoliController extends Controller
     {
         $daftar_polis = DaftarPoli::where('id_pasien', auth()->user()->pasien->id)->get();
         $polis = Poli::all();
-        $jadwal_periksas = JadwalPeriksa::all();
+        $jadwal_periksas = JadwalPeriksa::where('status', 'Aktif')->get();
         return view('pasien.daftar-poli.index', compact('daftar_polis', 'polis', 'jadwal_periksas'));
     }
 
@@ -46,7 +47,6 @@ class DaftarPoliController extends Controller
             'keluhan' => 'required',
             'id_poli' => 'required',
         ]);
-
 
         $no_antrian = DaftarPoli::where('id_jadwal', $request->id_jadwal)
             ->whereDate('created_at', today())

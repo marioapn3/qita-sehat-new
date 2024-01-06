@@ -96,7 +96,7 @@
                             <label for="id_jadwal" class="mb-1">Pilih Jadwal</label>
                             <select class="form-select w-full" name="id_jadwal" id="id_jadwal">
                                 @foreach ($jadwal_periksas as $jadwal)
-                                    <option value="{{ $jadwal->id }}">{{ $jadwal->hari }}, {{ $jadwal->jam_mulai }} -
+                                    <option value="{{ $jadwal->id }}"> {{ $jadwal->hari }}, {{ $jadwal->jam_mulai }} -
                                         {{ $jadwal->jam_selesai }}</option>
                                 @endforeach
                             </select>

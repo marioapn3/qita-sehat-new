@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('jadwal_periksas', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
             $table->enum('hari', ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']);
             $table->time('jam_mulai');
             $table->time('jam_selesai');
+            $table->enum('status', ['Aktif', 'Tidak Aktif'])->default('Aktif');
             $table->foreignId('id_dokter')->constrained('dokters')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });

@@ -52,6 +52,14 @@
                                     class="form-control" />
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label for="status">Status</label>
+                            <select name="status" id="status" class="form-select w-full"
+                                aria-label="Status Jadwal Periksa" required>
+                                <option @selected($jadwal->status == 'Aktif') value="Aktif">Aktif</option>
+                                <option @selected($jadwal->status == 'Tidak Aktif') value="Tidak Aktif">Tidak Aktif</option>
+                            </select>
+                        </div>
                         <div class="d-flex flex-md-row flex-column gap-2">
                             <button type="submit" class="btn btn-success" title="Simpan Data">Simpan</button>
                         </div>
