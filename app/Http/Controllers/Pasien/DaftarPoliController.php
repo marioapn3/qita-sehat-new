@@ -36,7 +36,7 @@ class DaftarPoliController extends Controller
     {
         $daftar_polis = DaftarPoli::where('id_pasien', auth()->user()->pasien->id)->get();
         $polis = Poli::all();
-        $jadwal_periksas = JadwalPeriksa::where('status', 'Aktif')->get();
+        $jadwal_periksas = JadwalPeriksa::where('aktif', 'Y')->get();
         return view('pasien.daftar-poli.index', compact('daftar_polis', 'polis', 'jadwal_periksas'));
     }
 

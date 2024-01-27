@@ -49,14 +49,14 @@
                                 <input type="time" name="jam_selesai" class="form-control" />
                             </div>
                         </div>
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="status">Status</label>
                             <select name="status" id="status" class="form-select w-full"
                                 aria-label="Status Jadwal Periksa" required>
-                                <option value="Aktif">Aktif</option>
-                                <option value="Tidak Aktif">Tidak Aktif</option>
+                                <option value="Y">Aktif</option>
+                                <option value="T">Tidak Aktif</option>
                             </select>
-                        </div>
+                        </div> --}}
                         <div class="d-flex flex-md-row flex-column gap-2">
                             <button type="submit" class="btn btn-success" title="Simpan Data">Simpan</button>
                         </div>

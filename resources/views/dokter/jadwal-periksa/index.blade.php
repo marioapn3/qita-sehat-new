@@ -52,7 +52,7 @@
                                             <td>{{ $jadwal->jam_mulai }}</td>
                                             <td>{{ $jadwal->jam_selesai }}</td>
                                             <td>
-                                                @if ($jadwal->status == 'Aktif')
+                                                @if ($jadwal->aktif == 'Y')
                                                     <span class="badge bg-success">Aktif</span>
                                                 @else
                                                     <span class="badge bg-danger">Tidak Aktif</span>
@@ -62,12 +62,12 @@
                                                 <a href="{{ route('dokter.jadwal-periksa.edit', $jadwal->id) }}"
                                                     class="btn btn-warning" role="button" title="Ubah Data"><i
                                                         class="bi bi-pencil-square"></i></a>
-                                                <a href="#" class="btn btn-danger  delete-btn deleteData"
+                                                {{-- <a href="#" class="btn btn-danger  delete-btn deleteData"
                                                     data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal"
                                                     data-id="{{ $jadwal->id }}" data-bs-toggle="tooltip"
                                                     data-bs-placement="top" title="Hapus Data">
                                                     <i class="bi bi-trash"></i>
-                                                </a>
+                                                </a> --}}
                                             </td>
                                         </tr>
                                     @endforeach

@@ -53,11 +53,17 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="status">Status</label>
-                            <select name="status" id="status" class="form-select w-full"
+                            <label for="aktif">Status</label>
+                            <select name="aktif" id="aktif" class="form-select w-full"
                                 aria-label="Status Jadwal Periksa" required>
-                                <option @selected($jadwal->status == 'Aktif') value="Aktif">Aktif</option>
-                                <option @selected($jadwal->status == 'Tidak Aktif') value="Tidak Aktif">Tidak Aktif</option>
+                                @if ($jadwal->aktif == 'Y')
+                                    <option value="Y" selected>Aktif</option>
+                                    <option value="T">Tidak Aktif</option>
+                                @else
+                                    <option value="Y">Aktif</option>
+                                    <option value="T" selected>Tidak Aktif</option>
+                                @endif
+
                             </select>
                         </div>
                         <div class="d-flex flex-md-row flex-column gap-2">

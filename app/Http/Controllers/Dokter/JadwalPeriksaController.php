@@ -37,7 +37,7 @@ class JadwalPeriksaController extends Controller
             'jam_mulai' => $request->jam_mulai,
             'jam_selesai' => $request->jam_selesai,
             'id_dokter' => auth()->user()->dokter->id,
-            'status' => $request->status,
+            'aktif' => 'T',
         ]);
         return redirect()->route('dokter.jadwal-periksa.index')->with('success', 'Jadwal periksa berhasil ditambahkan');
     }
@@ -55,13 +55,13 @@ class JadwalPeriksaController extends Controller
             'jam_mulai' => 'required',
             'jam_selesai' => 'required',
         ]);
-
+        JadwalPeriksa::query()->update(['aktif' => 'T']);
         $jadwal = JadwalPeriksa::findOrFail($id);
         $jadwal->update([
             'hari' => $request->hari,
             'jam_mulai' => $request->jam_mulai,
             'jam_selesai' => $request->jam_selesai,
-            'status' => $request->status,
+            'aktif' => $request->aktif,
         ]);
         return redirect()->route('dokter.jadwal-periksa.index')->with('success', 'Jadwal periksa berhasil diubah');
     }
